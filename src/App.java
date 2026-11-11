@@ -9,6 +9,35 @@ public class App {
             new Persona("Diego", 25, "M"),
             new Persona("Ana", 35, "F")
         );
+
+
+        BusquedaBinaria bB= new BusquedaBinaria(personas);
+        int resultado = bB.findByName("Ana");
+        
+
+        if(resultado>=0 ){
+            System.out.println("Se encontro en la posicion= " + resultado);
+        } else{
+            System.out.println("No se encontro");
+        } 
+
+        int res= bB.findByName("Pedro");
+        //Operador Ternario
+        //cond ? accion TRUE :: accion FALSE
+
+        System.out.println(res >=0 ? "Se encontro en la pos=" + res: "No se encontro nada ");
+
+        int res2 = bB.findByAge(25);
+
+        System.out.println(res2 >=0 ? "Se encontro en la pos=" + res2: "No se encontro nada ");
+
+
+
+
+
+
+
+
     }
 
     // 1. BUSQUE UNA PERSONA con nombre "Maria"
